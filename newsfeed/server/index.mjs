@@ -77,7 +77,7 @@ const server = http.createServer(async (req, res) => {
   }
 
   // Wait 1 second to make loading states perceptible:
-  await sleep(1000);
+  // await sleep(1000);
 
   res.end(JSON.stringify(response));
 });

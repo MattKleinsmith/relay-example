@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<6dd9b5cd73892a5e3fdaf40e5d49c965>>
+ * @generated SignedSource<<c9baebba10a2c58d441066515f400616>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -138,21 +138,10 @@ return {
                 "selections": [
                   {
                     "alias": null,
-                    "args": [
-                      {
-                        "kind": "Literal",
-                        "name": "height",
-                        "value": 60
-                      },
-                      {
-                        "kind": "Literal",
-                        "name": "width",
-                        "value": 60
-                      }
-                    ],
+                    "args": null,
                     "kind": "ScalarField",
                     "name": "url",
-                    "storageKey": "url(height:60,width:60)"
+                    "storageKey": null
                   },
                   (v1/*: any*/)
                 ],
@@ -174,13 +163,18 @@ return {
                 "args": [
                   {
                     "kind": "Literal",
+                    "name": "height",
+                    "value": 400
+                  },
+                  {
+                    "kind": "Literal",
                     "name": "width",
                     "value": 400
                   }
                 ],
                 "kind": "ScalarField",
                 "name": "url",
-                "storageKey": "url(width:400)"
+                "storageKey": "url(height:400,width:400)"
               },
               (v1/*: any*/)
             ],
@@ -192,12 +186,12 @@ return {
     ]
   },
   "params": {
-    "cacheID": "aebbd0c19babde43569dbd6ea07914e4",
+    "cacheID": "c9a563702878cf257317697ed776e705",
     "id": null,
     "metadata": {},
     "name": "NewsfeedQuery",
     "operationKind": "query",
-    "text": "query NewsfeedQuery {\n  topStories {\n    id\n    ...StoryFragment\n  }\n}\n\nfragment ImageFragment_3XLoCc on Image {\n  url(width: 60, height: 60)\n  altText\n}\n\nfragment ImageFragment_OxVt3 on Image {\n  url(width: 400)\n  altText\n}\n\nfragment PosterBylineFragment on Actor {\n  __isActor: __typename\n  id\n  name\n  profilePicture {\n    ...ImageFragment_3XLoCc\n  }\n}\n\nfragment StoryFragment on Story {\n  title\n  summary\n  createdAt\n  poster {\n    __typename\n    ...PosterBylineFragment\n    id\n  }\n  thumbnail {\n    ...ImageFragment_OxVt3\n  }\n}\n"
+    "text": "query NewsfeedQuery {\n  topStories {\n    id\n    ...StoryFragment\n  }\n}\n\nfragment ImageFragment on Image {\n  url\n  altText\n}\n\nfragment ImageFragment_1YYarZ on Image {\n  url(width: 400, height: 400)\n  altText\n}\n\nfragment PosterBylineFragment on Actor {\n  __isActor: __typename\n  id\n  name\n  profilePicture {\n    ...ImageFragment\n  }\n}\n\nfragment StoryFragment on Story {\n  title\n  summary\n  createdAt\n  poster {\n    __typename\n    ...PosterBylineFragment\n    id\n  }\n  thumbnail {\n    ...ImageFragment_1YYarZ\n  }\n}\n"
   }
 };
 })();
